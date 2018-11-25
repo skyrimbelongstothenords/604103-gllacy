@@ -13,7 +13,7 @@
                   <a href="catalog.html" class="navLink">Каталог</a>
                   <ul class="submenu">
                      <li class="newIcecream"><a href="#">Новинки</a></li>
-                     <li class="submenuItem"><a href="#">Сливочное</a></li>
+                     <li class="submenuItem submenuCurrent"><a href="#">Сливочное</a></li>
                      <li class="submenuItem"><a href="#">Щербеты</a></li>
                      <li class="submenuItem"><a href="#">Фруктовый лед</a></li>
                      <li class="submenuItem"><a href="#">Мелорин</a></li>
@@ -24,7 +24,7 @@
             </ul>
             <ul class="userNavigation">
                <li>
-                  <a href="#" class="userLink"><span class="visuallyHidden">Search</span></a>
+                  <a href="#" class="userLink"><span class="visuallyHidden">Поиск</span></a>
                   <form class="searchForm" action="#" method="get">
                      <label for="search" class="visuallyHidden">Поиск по сайту</label>
                      <input type="text" name="search" id="search"  placeholder="Что ищем?">
@@ -50,16 +50,24 @@
                   <a href="#" class="activeLink">2 товара</a>
                   <form action="#" method="post" class="goods">
                      <p class="goodsRow"><button type="button" class="goodsClose"><span class="visuallyHidden">Закрыть</span></button>
-                        <img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"> <span class="goodsWeight">1,5 кг x</span> <span class="goodsPrice">200 руб.</span>
+                        <a href="#">
+                            <img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                            <span class="goodsBuy">Пломбир с апельсиновым джемом</span>
+                        </a> 
+                        <span class="goodsWeight">1,5 кг x</span> <span class="goodsPrice">200 руб.</span>
                         <span class="goodsTotal">300 руб.</span>
                      </p>
                      <p class="goodsRow"><button type="button" class="goodsClose"><span class="visuallyHidden">Закрыть</span></button>
-                        <img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой"> <span class="goodsWeight">1,5 кг x</span> <span class="goodsPrice">300 руб.</span>
+                        <a href="#">
+                            <img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой"> 
+                            <span class="goodsBuy">Клубничный пломбир с присыпкой из белого шоколада</span>
+                        </a>
+                        <span class="goodsWeight">1,5 кг x</span> <span class="goodsPrice">300 руб.</span>
                         <span class="goodsTotal">450 руб.</span>
                      </p>
                      <hr>
                      <span class="total">Итого: 750 руб.</span>
-                     <button type="submit" class="btn">Оформить заказ</button>
+                     <a href="#" class="btn">Оформить заказ</a>
                   </form>
                </li>
             </ul>
