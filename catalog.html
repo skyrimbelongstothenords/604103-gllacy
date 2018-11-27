@@ -52,16 +52,16 @@
                      <h2 class="visuallyHidden">Выбранные товары</h2>
                      <p class="goodsRow"><button type="button" class="goodsClose"><span class="visuallyHidden">Закрыть</span></button>
                         <a href="#">
-                            <img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                            <span class="goodsBuy">Пломбир с апельсиновым джемом</span>
+                        <img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                        <span class="goodsBuy">Пломбир с апельсиновым джемом</span>
                         </a> 
                         <span class="goodsWeight">1,5 кг x</span> <span class="goodsPrice">200 руб.</span>
                         <span class="goodsTotal">300 руб.</span>
                      </p>
                      <p class="goodsRow"><button type="button" class="goodsClose"><span class="visuallyHidden">Закрыть</span></button>
                         <a href="#">
-                            <img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой"> 
-                            <span class="goodsBuy">Клубничный пломбир с присыпкой из белого шоколада</span>
+                        <img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой"> 
+                        <span class="goodsBuy">Клубничный пломбир с присыпкой из белого шоколада</span>
                         </a>
                         <span class="goodsWeight">1,5 кг x</span> <span class="goodsPrice">300 руб.</span>
                         <span class="goodsTotal">450 руб.</span>
@@ -69,7 +69,7 @@
                      <hr>
                      <span class="total">Итого: 750 руб.</span>
                      <a href="#" class="btn">Оформить заказ</a>
-                    </section>
+                  </section>
                </li>
             </ul>
          </nav>
@@ -85,15 +85,40 @@
          <h1 class="mainHeading">Сливочное мороженое</h1>
          <section class="sorting">
             <h2 class="visuallyHidden">Выберите мороженое по вкусу</h2>
-            <!--Здесь будет форма
-               <span class="sortingText">Сортировка:</span> 
-               <span class="sortingFactor">по популярности</span>
-               <span class="sortingText">Цена: 100 руб. - 500 руб.</span>
-               <span class="sortingText">Жирность:</span> 
-               <span class="sortingFactor">0% до 10% до 30% свыше 30%</span>
-               <span class="sortingText">Наполнители:</span>
-               <span class="sortingFactor">шоколадные сахарные присыпки фрукты сиропы джемы</span> 
-               <span class="sortingButton">Применить</span>-->
+            <form class="filterForm" method="post" action="https://echo.htmlacademy.ru/">
+               <p class="filterSection">
+                  <label>
+                     Сортировка:
+                     <select name="sorting">
+                        <option value="popular">По популярности</option>
+                     </select>
+                  </label>
+                  <label>Цена: 100 руб. - 500 руб. 
+                  <input type="range" min="100" max="500" step="100">               
+                  </label>
+                  <label>Жирность:
+                  <input type="radio" name="fat" value="0%">0%
+                  </label>
+                  <label>
+                  <input type="radio" name="fat" value="before10%" checked>до 10%
+                  </label>
+                  <label>
+                  <input type="radio" name="fat" value="before30%">до 30%
+                  </label>
+                  <label>
+                  <input type="radio" name="fat" value="above30%">выше 30%
+                  </label>
+               </p>
+               <p class="filterSection">
+                  Наполнители:
+                  <label><input type="checkbox" name="fill" value="chocolate" checked>шоколадные</label>
+                  <label> <input type="checkbox" name="fill2" value="sugar" checked>сахарные присыпки</label>
+                  <label> <input type="checkbox" name="fill3" value="fruit">фрукты</label>
+                  <label> <input type="checkbox" name="fill4" value="syrup">сиропы</label>
+                  <label>  <input type="checkbox" name="fill5" value="jam">джемы</label>
+                  <button type="submit" class="filterBtn">Применить</button>
+               </p>
+            </form>
          </section>
          <ul class="icecreamList">
             <li class="icecreamItem">
@@ -193,7 +218,7 @@
                <span class="itemWeight">/кг</span>
             </li>
          </ul>
-         <ul class="paginationList">
+         <ul class="paginationList" aria-label="Больше страниц с результатами">
             <li class="paginationItem paginationItemCurrent">1</li>
             <li class="paginationItem"><a href="#" class="paginationLink">2</a></li>
             <li class="paginationItem"><a href="#" class="paginationLink">3</a></li>
