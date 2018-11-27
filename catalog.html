@@ -52,16 +52,16 @@
                      <h2 class="visuallyHidden">Выбранные товары</h2>
                      <p class="goodsRow"><button type="button" class="goodsClose"><span class="visuallyHidden">Закрыть</span></button>
                         <a href="#">
-                        <img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                        <span class="goodsBuy">Пломбир с апельсиновым джемом</span>
+                            <img src="img/1.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                            <span class="goodsBuy">Пломбир с апельсиновым джемом</span>
                         </a> 
                         <span class="goodsWeight">1,5 кг x</span> <span class="goodsPrice">200 руб.</span>
                         <span class="goodsTotal">300 руб.</span>
                      </p>
                      <p class="goodsRow"><button type="button" class="goodsClose"><span class="visuallyHidden">Закрыть</span></button>
                         <a href="#">
-                        <img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой"> 
-                        <span class="goodsBuy">Клубничный пломбир с присыпкой из белого шоколада</span>
+                            <img src="img/3.jpg" width="33" height="33" alt="Клубничный пломбир с присыпкой"> 
+                            <span class="goodsBuy">Клубничный пломбир с присыпкой из белого шоколада</span>
                         </a>
                         <span class="goodsWeight">1,5 кг x</span> <span class="goodsPrice">300 руб.</span>
                         <span class="goodsTotal">450 руб.</span>
@@ -86,38 +86,42 @@
          <section class="sorting">
             <h2 class="visuallyHidden">Выберите мороженое по вкусу</h2>
             <form class="filterForm" method="post" action="https://echo.htmlacademy.ru/">
-               <p class="filterSection">
+               <div class="filterSection">
                   <label>
-                     Сортировка:
-                     <select name="sorting">
-                        <option value="popular">По популярности</option>
-                     </select>
+                    Сортировка:
+                    <select name="sorting">
+                        <option value="popular">по популярности</option>
+                        <option value="cheap">сначала недорогие</option>
+                        <option value="expensive">сначала дорогие</option>
+                        <option value="fatty">по жирности</option>
+                    </select>
                   </label>
                   <label>Цена: 100 руб. - 500 руб. 
-                  <input type="range" min="100" max="500" step="100">               
+                    <input type="range" min="100" max="500" step="100">               
                   </label>
-                  <label>Жирность:
-                  <input type="radio" name="fat" value="0%">0%
+                  <span class="filterHeading">Жирность:</span>
+                  <label>
+                    <input type="radio" name="fat" value="0%">0%
                   </label>
                   <label>
-                  <input type="radio" name="fat" value="before10%" checked>до 10%
+                    <input type="radio" name="fat" value="before10%" checked>до 10%
                   </label>
                   <label>
-                  <input type="radio" name="fat" value="before30%">до 30%
+                    <input type="radio" name="fat" value="before30%">до 30%
                   </label>
                   <label>
-                  <input type="radio" name="fat" value="above30%">выше 30%
+                    <input type="radio" name="fat" value="above30%">выше 30%
                   </label>
-               </p>
-               <p class="filterSection">
-                  Наполнители:
-                  <label><input type="checkbox" name="fill" value="chocolate" checked>шоколадные</label>
-                  <label> <input type="checkbox" name="fill2" value="sugar" checked>сахарные присыпки</label>
-                  <label> <input type="checkbox" name="fill3" value="fruit">фрукты</label>
-                  <label> <input type="checkbox" name="fill4" value="syrup">сиропы</label>
-                  <label>  <input type="checkbox" name="fill5" value="jam">джемы</label>
+                </div>
+               <div class="filterSection">
+                  <span class="filterHeading">Наполнители:</span>
+                  <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
+                  <label> <input type="checkbox" name="sugar" checked>сахарные присыпки</label>
+                  <label> <input type="checkbox" name="fruit">фрукты</label>
+                  <label> <input type="checkbox" name="syrup">сиропы</label>
+                  <label>  <input type="checkbox" name="jam">джемы</label>
                   <button type="submit" class="filterBtn">Применить</button>
-               </p>
+               </div>
             </form>
          </section>
          <ul class="icecreamList">
