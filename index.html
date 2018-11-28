@@ -3,6 +3,9 @@
    <head>
       <meta charset="utf-8">
       <title>HTML Academy: Глейси</title>
+      <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/style.css">
    </head>
    <body>
       <header class="mainHeader">
@@ -10,7 +13,7 @@
             <a><img src="img/logo.svg" alt="Логотип Gllacy Shop" class="logo" width="154" height="64"></a>
             <ul class="siteNavigation">
                <li>
-                  <a href="catalog.html" class="navLink">Каталог</a>
+                  <a href="catalog.html" class="navLink catalogLink">Каталог</a>
                   <ul class="submenu">
                      <li class="newIcecream"><a href="#">Новинки</a></li>
                      <li class="submenuItem"><a href="#">Сливочное</a></li>
@@ -120,7 +123,7 @@
             </li>
          </ul>
          <section class="shopDescription">
-            <h3>Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
+            <h3 class="shopDescriptionTitle">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
             <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем 
                технологий.
             </p>
@@ -138,16 +141,18 @@
             <h1 class="blogHeading">Новое в нашем блоге</h1>
             <a href="#" class="blogLink">10 способов сервировки фруктовых щербетов к столу</a>
          </article>
-         <section class="subsribe">
-            <h3 class="visuallyHidden">Подписка на нашу рассылку</h3>
-            <p class="subsribeParagraph">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. 
+         <section class="subscribe">
+            <div class="subscribeContainer">
+                <h3 class="visuallyHidden">Подписка на нашу рассылку</h3>
+                <p class="subscribeParagraph">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. 
                Обещаем не спамить и не слать всякой ненужной ерунды. Честно =) 
-            </p>
-            <form action="https://echo.htmlacademy.ru/" method="post" class="subscribeForm">
-               <label class="visuallyHidden" for="emailSubcribe">Электронная почта</label>
-               <input type="text" id="emailSubcribe" name="emailSubcribe" placeholder="Электронная почта">
-               <button class="btn" type="submit">Отправить</button>
-            </form>
+                </p>
+                <form action="https://echo.htmlacademy.ru/" method="post" class="subscribeForm">
+                    <label class="visuallyHidden" for="emailSubcribe">Электронная почта</label>
+                    <input type="text" id="emailSubcribe" name="emailSubcribe" placeholder="Электронная почта">
+                    <button class="btn" type="submit">Отправить</button>
+                </form>
+            </div>
          </section>
          <section class="map">
             <h3 class="visuallyHidden">Как нас найти</h3>
