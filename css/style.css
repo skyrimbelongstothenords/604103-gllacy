@@ -30,7 +30,7 @@ a:active {
     color: #ffbc9e;
 }
 
-.siteNavigation, .submenu, .userNavigation, .icecreamList, .social ul, .footerLinks ul {
+.list {
     list-style: none;
 }
 
@@ -47,7 +47,7 @@ a:active {
     color: #323232;
 }
 
-.submenu newIcecream {
+.submenu .newIcecream {
     font-weight: 700;
 }
 
@@ -72,6 +72,7 @@ a.catalogCurrent {
     color: #fff;
     background-color: #d07058;
     font-weight: 700;
+    text-decoration: none;
 }
 
 .userNavigation .userLink {
@@ -180,6 +181,10 @@ a.catalogCurrent {
     line-height: 18px;
 }
 
+.logoLink {
+    font-weight: normal;
+}
+
 /* Страница каталога */
 
 .workTime  {
@@ -198,6 +203,12 @@ a.catalogCurrent {
 
 .breadcrumbs {
     list-style: none;
+}
+
+.breadcrumbs li {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: normal;
 }
 
 .breadcrumbsCurrent {
