@@ -126,13 +126,13 @@ a.catalogCurrent {
     background-repeat: no-repeat;
 }
 
-.giftContainer .giftRaspberry {
+.gifts .giftRaspberry {
     background-color: #701c33;
     background-image: url('../img/raspberry_bg.jpg');
     background-repeat: no-repeat;
 }
 
-.giftContainer .giftChoco {
+.gifts .giftChoco {
     background-color: #3e271c;
     background-image: url('../img/chocolate_bg.jpg');
     background-repeat: no-repeat;
