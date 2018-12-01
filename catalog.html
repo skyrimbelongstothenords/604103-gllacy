@@ -91,15 +91,15 @@
             <form class="filterForm" method="post" action="https://echo.htmlacademy.ru/">
                <div class="filterSection">
                   <label>
-                    Сортировка:
-                    <select name="sorting">
+                    <span class="filterHeading">Сортировка:</span>
+                    <select name="sorting" class="filterSelect">
                         <option value="popular">по популярности</option>
                         <option value="cheap">сначала недорогие</option>
                         <option value="expensive">сначала дорогие</option>
                         <option value="fatty">по жирности</option>
                     </select>
                   </label>
-                  <label>Цена: 100 руб. - 500 руб. 
+                  <label><span class="filterHeading">Цена: 100 руб. - 500 руб.</span> 
                     <input type="range" min="100" max="500" step="100">               
                   </label>
                   <span class="filterHeading">Жирность:</span>
@@ -225,7 +225,7 @@
                <span class="itemWeight">/кг</span>
             </li>
          </ul>
-         <ul class="paginationList" aria-label="Больше страниц с результатами">
+         <ul class="paginationList list" aria-label="Больше страниц с результатами">
             <li class="paginationItem paginationItemCurrent">1</li>
             <li class="paginationItem"><a href="#" class="paginationLink">2</a></li>
             <li class="paginationItem"><a href="#" class="paginationLink">3</a></li>
