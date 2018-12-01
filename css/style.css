@@ -126,15 +126,15 @@ a.catalogCurrent {
     background-repeat: no-repeat;
 }
 
-.giftContainer:first-child {
+.giftContainer .giftRaspberry {
     background-color: #701c33;
     background-image: url('../img/raspberry_bg.jpg');
     background-repeat: no-repeat;
 }
 
-.giftContainer:nth-child(2) {
+.giftContainer .giftChoco {
     background-color: #3e271c;
-    background-image: url('../img/raspberry_bg.jpg');
+    background-image: url('../img/chocolate_bg.jpg');
     background-repeat: no-repeat;
 }
 
@@ -236,7 +236,7 @@ a.catalogCurrent {
 
 .mapText .address {
     font-size: 14px;
-    line-height: 10px;
+    line-height: 20px;
 }
 
 .address b {
@@ -246,7 +246,6 @@ a.catalogCurrent {
 
 .footerLinks a {
     font-size: 13px;
-    line-height: 18px;
 }
 
 .footerCopyright {
@@ -279,7 +278,7 @@ a.catalogCurrent {
     list-style: none;
 }
 
-.breadcrumbs li {
+.breadcrumbs a {
     font-size: 14px;
     line-height: 16px;
     font-weight: normal;
@@ -287,6 +286,9 @@ a.catalogCurrent {
 
 .breadcrumbsCurrent {
     color: #fff;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
 }
 
 .mainHeading {
@@ -335,11 +337,11 @@ a.catalogCurrent {
     font-size: 16px;
     line-height: 18px;
     color: #fff;
-    background: rgba(169, 186, 176, 0.2);
+    background: rgba(255, 255, 255, 0.2);
 }
 
-.filterSelect option {
-    background-color: rgba(169, 186, 176);
+.inputBg {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .filterBtn {
@@ -347,7 +349,17 @@ a.catalogCurrent {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
-    background-color: #a6b7ae;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filterBtn:hover {
+    color: #323232;
+    background-color: #fff;
+}
+
+.filterBtn:active {
+    background-color: #ededed;
+    box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
 .paginationItem {
@@ -362,3 +374,16 @@ a.catalogCurrent {
 .paginationItemCurrent {
     background-color: #fff;
 }
+
+.visuallyHidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
