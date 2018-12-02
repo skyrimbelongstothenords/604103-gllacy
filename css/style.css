@@ -63,7 +63,7 @@ a:active {
     background-color: #d07058;
 }
 
-.catalogLink:active {
+.catalogLink > a:active {
     background-color: #ededed;
     color: #333;
 }
@@ -387,3 +387,210 @@ a.catalogCurrent {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
+
+/* ------------------------- Сетки ---------------------------- */
+
+body {
+    min-width: 1200px;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+}
+
+.mainHeader .logo {
+    margin-top: 9px;
+    margin-right: 27px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 27px;
+    
+}
+
+.mainNavigation {
+    display: flex;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    z-index: 900;    
+}
+
+.catalogLink:hover  .submenu {
+    display: block;  
+}
+
+.siteNavigation, .userNavigation {
+    padding-top: 20px;
+}
+
+.userNavigation {
+    margin-left: auto;
+}
+
+.siteNavigation li {
+    display: inline-block;
+    margin-right: 25px;
+    position: relative;
+}
+
+.siteNavigation li:last-child, .userNavigation li:last-child {
+    margin-right: 0px;
+}
+
+.userNavigation li {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+/* Описание магазина */
+
+.shopDescription {
+    padding: 30px 20px;
+    padding-bottom: 0;
+    margin-bottom: 40px;
+}
+
+.shopDescriptionTitle {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 20px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.content p {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 30px;
+    width: 480px;
+    margin-left: 70px;
+}
+
+.content p:nth-child(2) {
+    order: 1;
+}
+.content p:nth-child(4) {
+    order: 4;
+}
+
+/* Article с ссылкой на блог */
+
+.postsWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.blog {
+    width: 560px;
+    min-height: 200px;
+    padding: 26px 20px;
+}
+
+.blogLink {
+    display: block;
+    width: 280px;
+}
+
+.blogHeading {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+/* Подписка на рассылку */
+
+.subscribe {
+    border-radius: 15px;
+    width: 560px;
+}
+
+.subscribeContainer {
+    min-height: 210px;
+    margin: 0 auto;
+    width: 550px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 33px 21px;
+}
+
+.subscribeParagraph {
+    padding: 0;
+    margin: 0;
+    padding-bottom: 37px;
+}
+
+/* Футер */
+
+.mainFooter {
+    padding: 35px 0;
+}
+
+.mainFooter .container {
+    display: flex;
+    
+}
+
+.mainFooter .social {
+    width: 190px;
+    margin-right: 210px;
+}
+
+.footerLinks {
+    width: 330px; 
+}
+
+.footerCopyright {
+    width: 185px;
+    margin-left: auto;
+}
+
+/* Страница каталога */
+
+span.workTime, span.phoneNumber {
+    text-align: right;
+    display: block;  
+}
+
+.breadcrumbs {
+    margin-bottom: 13px;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.mainHeading {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+ul.icecreamList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+    margin-bottom: 104px;
+}
+
+.icecreamItem {
+    display: flex;
+    flex-direction: column;
+    width: 267px;
+}
+
+.icecreamImage {
+    order: -1;
+}

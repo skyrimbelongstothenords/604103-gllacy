@@ -9,11 +9,12 @@
    </head>
    <body>
       <header class="mainHeader">
+        <div class="container">
          <nav class="mainNavigation">
             <a href="index.html" aria-label="Главная страница Gllacy Shop"><img src="img/logo.svg" alt="Логотип Gllacy Shop" class="logo" width="154" height="64"></a>
             <ul class="siteNavigation list">
-               <li>
-                  <a href="catalog.html" class="navLink catalogLink catalogCurrent">Каталог</a>
+               <li class="catalogLink">
+                  <a href="catalog.html" class="navLink catalogCurrent">Каталог</a>
                   <ul class="submenu list">
                      <li class="newIcecream"><a href="#">Новинки</a></li>
                      <li class="submenuItem submenuCurrent"><a href="#">Сливочное</a></li>
@@ -76,11 +77,14 @@
                </li>
             </ul>
          </nav>
+        </div>
+        <div class="container">
          <span class="workTime">С 10 до 20, ежедневно</span>
          <span class="phoneNumber">8 812 450-25-25</span>
+        </div> 
       </header>
       <main class="container">
-         <ul class="breadcrumbs">
+         <ul class="breadcrumbs list">
             <li><a href="index.html">Главная</a></li>
             <li><a href="#">Каталог</a></li>
             <li class="breadcrumbsCurrent">Сливочное</li>
@@ -239,6 +243,7 @@
          </ul>
       </main>
       <footer class="mainFooter">
+        <div class="container">
          <div class="social">
             <ul class="list">
                 <li><a class="socialButton" href="#"><span class="visuallyHidden">Твиттер</span></a></li>
@@ -259,6 +264,7 @@
             <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт компании HTML Academy"><img src="img/logo-htmlacademy.svg" alt="HTML academy logo" width="108" height="39"></a> 
             Сделано в <a class="logoLink" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017
          </p>
+        </div>
       </footer>
    </body>
 </html>

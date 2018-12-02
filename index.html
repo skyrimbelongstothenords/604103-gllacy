@@ -9,11 +9,12 @@
    </head>
    <body>
       <header class="mainHeader">
+        <div class="container">
          <nav class="mainNavigation">
             <a><img src="img/logo.svg" alt="Логотип Gllacy Shop" class="logo" width="154" height="64"></a>
             <ul class="siteNavigation list">
-               <li>
-                  <a href="catalog.html" class="navLink catalogLink">Каталог</a>
+               <li class="catalogLink">
+                  <a href="catalog.html" class="navLink">Каталог</a>
                   <ul class="submenu list">
                      <li class="newIcecream"><a href="#">Новинки</a></li>
                      <li class="submenuItem"><a href="catalog.html">Сливочное</a></li>
@@ -53,6 +54,7 @@
                <li><a href="#" class="userLink">Пусто</a></li>
             </ul>
          </nav>
+        </div>
          <span class="workTime">С 10 до 20, ежедневно</span>
          <span class="phoneNumber">8 812 450-25-25</span>
       </header>
@@ -124,19 +126,22 @@
          </ul>
          <section class="shopDescription">
             <h3 class="shopDescriptionTitle">Магазин Глэйси - это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
-            <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем 
+            <div class="content">
+                <p>Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем 
                технологий.
-            </p>
-            <p>  Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. 
+                </p>
+                <p>  Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. 
                Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.  
-            </p>
-            <p> Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, 
+                </p>
+                <p> Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, 
                с которыми нас связывает долговременное сотрудничество.
-            </p>
-            <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, 
+                </p>
+                <p>Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, 
                который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.
-            </p>
+                </p>
+            </div>
          </section>
+        <div class="postsWrapper">
          <article class="blog">
             <h1 class="blogHeading">Новое в нашем блоге</h1>
             <a href="#" class="blogLink">10 способов сервировки фруктовых щербетов к столу</a>
@@ -154,6 +159,7 @@
                 </form>
             </div>
          </section>
+        </div>
          <section class="map">
             <div class="mapText">
                 <h3 class="visuallyHidden">Как нас найти</h3>
@@ -169,6 +175,7 @@
          </section>
       </main>
       <footer class="mainFooter">
+        <div class="container">
          <div class="social">
             <ul class="list">
                <li><a class="socialButton" href="#"><span class="visuallyHidden">Твиттер</span></a></li>
@@ -189,6 +196,7 @@
             <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт компании HTML Academy"><img src="img/logo-htmlacademy.svg" alt="HTML academy logo" width="108" height="39"></a> 
             Сделано в <a class="logoLink" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017
          </p>
+        </div>
       </footer>
       <form class="feedbackForm" method="post" action="https://echo.htmlacademy.ru/">
          <p class="feedbackText">Мы обязательно вам ответим!</p>
