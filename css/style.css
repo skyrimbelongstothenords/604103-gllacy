@@ -14,6 +14,7 @@ body {
     line-height: 22px;
     color: #323232;
     background-color: #849d8f;
+    min-width: 1200px;
 }
 
 a {
@@ -32,12 +33,63 @@ a:active {
 
 .list {
     list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 27px;
+    
+}
+
+.mainHeader .logo {
+    margin-top: 9px;
+    margin-right: 27px;
+}
+
+.mainNavigation {
+    display: flex;
+}
+
+.siteNavigation, .userNavigation {
+    padding-top: 20px;
+}
+
+.userNavigation {
+    margin-left: auto;
+}
+
+.siteNavigation li {
+    display: inline-block;
+    margin-right: 25px;
+    position: relative;
+}
+
+.siteNavigation li:last-child, .userNavigation li:last-child {
+    margin-right: 0px;
+}
+
+.userNavigation li {
+    display: inline-block;
+    margin-right: 8px;
 }
 
 .siteNavigation .navLink {
     line-height: 18px;
     color: #fff;
     font-weight: 700;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    z-index: 900;    
+}
+
+.catalogLink:hover  .submenu {
+    display: block;  
 }
 
 .submenu a {
@@ -159,6 +211,8 @@ a.catalogCurrent {
     font-weight: 500;
     font-size: 24px;
     line-height: 30px;
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
 .shopDescription {
@@ -167,6 +221,34 @@ a.catalogCurrent {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px;
+    padding-top: 6px;
+    padding-bottom: 17px;
+    margin-bottom: 40px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.content p {
+    width: 480px;
+    margin-left: 70px;
+    margin-bottom: 9px;
+}
+
+.content p:nth-child(2) {
+    order: 1;
+}
+.content p:nth-child(4) {
+    order: 4;
+}
+
+.postsWrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 
 .blog {
@@ -175,13 +257,17 @@ a.catalogCurrent {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px;
+    width: 560px;
+    min-height: 200px;
+    padding-left: 20px;
+    padding-top: 15px;
 }
-
 
 .blog .blogHeading {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
+    margin-bottom: 10px;
 }
 
 .blog .blogLink {
@@ -189,21 +275,35 @@ a.catalogCurrent {
     font-size: 24px;
     line-height: 30px;
     color: #323232;
+    display: block;
+    width: 280px;
 }
 
 .subscribe {
     background-image: url('../img/bg-post.svg');
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 15px;
+    width: 560px;
 }
 
 .subscribeContainer {
     background-color: #f8f7f4;
     border-radius: 10px;
+    min-height: 210px;
+    margin: 0 auto;
+    width: 550px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding-top: 1px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .subscribeContainer .subscribeParagraph {
     color: #5a5a5a;
+    margin-top: 33px;
+    margin-bottom: 35px;
 }
 
 .subscribeForm input {
@@ -244,6 +344,27 @@ a.catalogCurrent {
     line-height: 24px;
 }
 
+.mainFooter {
+    padding: 35px 0;
+}
+
+.mainFooter .container {
+    display: flex;
+}
+
+.mainFooter .social {
+    width: 190px;
+    margin-right: 210px;
+}
+
+.footerLinks {
+    width: 330px; 
+}
+
+.footerCopyright {
+    width: 185px;
+    margin-left: auto;
+}
 .footerLinks a {
     font-size: 13px;
 }
@@ -256,6 +377,38 @@ a.catalogCurrent {
 
 .logoLink {
     font-weight: normal;
+}
+
+/* Форма отзыва */
+
+.feedbackForm {
+    padding-top: 1px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #f8f7f4;
+    width: 478px;
+    height: 443px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.feedbackForm .close {
+    position: absolute;
+    left: 450px; /* Примерное, чтобы не мешалось*/
+    top: 10px;
+}
+
+.feedbackForm .feedbackText {
+    margin-top: 19px;
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 500;
+}
+
+.feedbackForm input, .feedbackForm textarea {
+    line-height: 24px;
+    color: #999999;
 }
 
 /* Страница каталога */
@@ -274,8 +427,18 @@ a.catalogCurrent {
     font-weight: 700;
 }
 
+span.workTime, span.phoneNumber {
+    text-align: right;
+    display: block;  
+}
+
 .breadcrumbs {
     list-style: none;
+}
+
+.breadcrumbs li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 .breadcrumbs a {
@@ -296,6 +459,27 @@ a.catalogCurrent {
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 13px;
+}
+
+ul.icecreamList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 104px;
+    margin-left: 27px;
+}
+
+.icecreamItem {
+    display: flex;
+    flex-direction: column;
+    width: 267px;
+    margin-right: 25px;
+}
+
+.icecreamImage {
+    order: -1;
 }
 
 .icecreamList .icecreamLink {
@@ -387,210 +571,3 @@ a.catalogCurrent {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-
-/* ------------------------- Сетки ---------------------------- */
-
-body {
-    min-width: 1200px;
-}
-
-.list {
-    margin: 0;
-    padding: 0;
-}
-
-.mainHeader .logo {
-    margin-top: 9px;
-    margin-right: 27px;
-}
-
-.container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 27px;
-    
-}
-
-.mainNavigation {
-    display: flex;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    z-index: 900;    
-}
-
-.catalogLink:hover  .submenu {
-    display: block;  
-}
-
-.siteNavigation, .userNavigation {
-    padding-top: 20px;
-}
-
-.userNavigation {
-    margin-left: auto;
-}
-
-.siteNavigation li {
-    display: inline-block;
-    margin-right: 25px;
-    position: relative;
-}
-
-.siteNavigation li:last-child, .userNavigation li:last-child {
-    margin-right: 0px;
-}
-
-.userNavigation li {
-    display: inline-block;
-    margin-right: 8px;
-}
-
-/* Описание магазина */
-
-.shopDescription {
-    padding: 30px 20px;
-    padding-bottom: 0;
-    margin-bottom: 40px;
-}
-
-.shopDescriptionTitle {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 20px;
-}
-
-.content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.content p {
-    margin: 0;
-    padding: 0;
-    padding-bottom: 30px;
-    width: 480px;
-    margin-left: 70px;
-}
-
-.content p:nth-child(2) {
-    order: 1;
-}
-.content p:nth-child(4) {
-    order: 4;
-}
-
-/* Article с ссылкой на блог */
-
-.postsWrapper {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 40px;
-}
-
-.blog {
-    width: 560px;
-    min-height: 200px;
-    padding: 26px 20px;
-}
-
-.blogLink {
-    display: block;
-    width: 280px;
-}
-
-.blogHeading {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 10px;
-}
-
-/* Подписка на рассылку */
-
-.subscribe {
-    border-radius: 15px;
-    width: 560px;
-}
-
-.subscribeContainer {
-    min-height: 210px;
-    margin: 0 auto;
-    width: 550px;
-    margin-bottom: 5px;
-    margin-top: 5px;
-    padding: 33px 21px;
-}
-
-.subscribeParagraph {
-    padding: 0;
-    margin: 0;
-    padding-bottom: 37px;
-}
-
-/* Футер */
-
-.mainFooter {
-    padding: 35px 0;
-}
-
-.mainFooter .container {
-    display: flex;
-    
-}
-
-.mainFooter .social {
-    width: 190px;
-    margin-right: 210px;
-}
-
-.footerLinks {
-    width: 330px; 
-}
-
-.footerCopyright {
-    width: 185px;
-    margin-left: auto;
-}
-
-/* Страница каталога */
-
-span.workTime, span.phoneNumber {
-    text-align: right;
-    display: block;  
-}
-
-.breadcrumbs {
-    margin-bottom: 13px;
-}
-
-.breadcrumbs li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.mainHeading {
-    margin: 0;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-ul.icecreamList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 104px;
-}
-
-.icecreamItem {
-    display: flex;
-    flex-direction: column;
-    width: 267px;
-}
-
-.icecreamImage {
-    order: -1;
-}
