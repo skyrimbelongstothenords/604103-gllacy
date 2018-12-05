@@ -93,21 +93,25 @@
                <h2 class="visuallyHidden">Выберите мороженое по вкусу</h2>
                <form class="filterForm" method="post" action="https://echo.htmlacademy.ru/">
                   <div class="filterSection">
-                     <label>
-                        <span class="filterHeading">Сортировка:</span>
-                        <select name="sorting" class="filterSelect">
+                    <div class="selecting"> 
+                    <label for="filterSelect">
+                        <span class="filterHeading">Сортировка:</span></label>
+                        <div class="selecting"><select name="sorting" class="filterSelect" id="filterSelect">
                            <option value="popular">по популярности</option>
                            <option value="cheap">сначала недорогие</option>
                            <option value="expensive">сначала дорогие</option>
                            <option value="fatty">по жирности</option>
                         </select>
-                     </label>
-                    <div class="inputBg"><label>
-                        <span class="filterHeading">Цена: 100 руб. - 500 руб.</span> 
-                        <input type="range" min="100" max="500" step="100">
-                     </label>
                     </div>
-                     <span class="filterHeading">Жирность:</span>
+                </div>
+                    <div class="ranging">
+                        <label for="ranger">
+                            <span class="filterHeading">Цена: 100 руб. - 500 руб.</span> </label>
+                            <div class="inputBg"> <input type="range" min="100" max="500" step="100" id="ranger">
+                            </div>
+                    </div>
+                    <div class="fatting">
+                    <span class="filterHeading">Жирность:</span>
                      <div class="inputBg">
                         <label>
                         <input type="radio" name="fat" value="0%">0%
@@ -124,7 +128,7 @@
                      </div>
                   </div>
                   <div class="filterSection">
-                     <span class="filterHeading">Наполнители:</span>
+                     <div class="filterHeading">Наполнители:</div>
                      <div class="inputBg">
                         <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
                         <label> <input type="checkbox" name="sugar" checked>сахарные присыпки</label>
@@ -132,6 +136,7 @@
                         <label> <input type="checkbox" name="syrup">сиропы</label>
                         <label>  <input type="checkbox" name="jam">джемы</label>
                      </div>
+                    </div>
                      <button type="submit" class="filterBtn">Применить</button>
                   </div>
                </form>
@@ -239,7 +244,7 @@
         </div>
         <div class="container">
          <ul class="paginationList list" aria-label="Больше страниц с результатами">
-            <li class="paginationItem paginationItemCurrent">1</li>
+            <li class="paginationItem"><a class="paginationItemCurrent">1</a></li>
             <li class="paginationItem"><a href="#" class="paginationLink">2</a></li>
             <li class="paginationItem"><a href="#" class="paginationLink">3</a></li>
             <li class="paginationItem"><a href="#" class="paginationLink">4</a></li>

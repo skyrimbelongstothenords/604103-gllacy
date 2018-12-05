@@ -178,6 +178,19 @@ a.catalogCurrent {
     background-repeat: no-repeat;
 }
 
+.gifts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.giftContainer {
+    width: 560px;
+    border-radius: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 23px;
+}
+
 .gifts .giftRaspberry {
     background-color: #701c33;
     background-image: url('../img/raspberry_bg.jpg');
@@ -194,6 +207,8 @@ a.catalogCurrent {
     color: #fff;
     font-size: 18px;
     font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 45px;
 }
 
 .giftContainer h3 {
@@ -201,6 +216,16 @@ a.catalogCurrent {
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
+    margin-top: 23px;
+    margin-bottom: 0;
+}
+
+.indexPageList .icecreamItem:nth-child(4n) {
+    margin-right: 0;
+}
+
+.index .indexPageList {
+    margin-bottom: 40px;
 }
 
 .icecreamImage img {
@@ -332,15 +357,26 @@ a.catalogCurrent {
 
 section.map {
     text-align: center;
+    position: relative;
 }
 
 .mapText {
     background-color: #fff;
+    width: 302px;
+    padding-left: 25px;
+    padding-right: 25px;
+    min-height: 305px;
+    border-radius: 15px;
+    position: absolute; 
+    top: 63px;
+    left: 871px;
+    text-align: left;
 }
 
 .mapText .address {
     font-size: 14px;
     line-height: 20px;
+    margin-top: 32px;
 }
 
 .address b {
@@ -477,7 +513,7 @@ ul.icecreamList {
     display: flex;
     flex-wrap: wrap;
     margin-top: 40px;
-    margin-bottom: 104px;
+    margin-bottom: 83px;
 }
 
 .icecreamItem {
@@ -514,6 +550,19 @@ ul.icecreamList {
 
 /* Форма фильтра */
 
+.sorting .filterSection {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filterSection {
+    order: 4;
+}
+
+.fatting {
+    order: 3;
+}
+
 .filterForm {
     color: #fff;
     font-size: 16px;
@@ -543,6 +592,9 @@ ul.icecreamList {
     line-height: 18px;
     font-weight: 500;
     background-color: rgba(255, 255, 255, 0.2);
+    order: 5;
+    border-radius: 15px;
+    border: 1px solid #fff;
 }
 
 .filterBtn:hover {
@@ -555,17 +607,42 @@ ul.icecreamList {
     box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
+/* Пагинация */
+
+.paginationList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
 .paginationItem {
     line-height: 18px;
     font-weight: 500;
+    margin-right: 5px;
+}
+
+.paginationItem:last-child {
+    margin-right: 0;
 }
 
 .paginationList a {
     text-decoration: none;
+    color: #fff;
+    display: block;
+    border-radius: 50%;
+    padding: 5px 10px;
 }
 
-.paginationItemCurrent {
+.paginationItem .paginationLink:hover {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+
+.paginationItem .paginationItemCurrent {
     background-color: #fff;
+    color: #323232;
 }
 
 .visuallyHidden {
