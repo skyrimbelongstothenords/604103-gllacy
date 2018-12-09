@@ -21,6 +21,7 @@ a {
     font-weight: 500;
     color: #fff;
     line-height: 18px;
+    text-decoration-color: rgba(255, 255, 255, 0.3);
 }
 
 a:hover {
@@ -29,6 +30,11 @@ a:hover {
 
 a:active {
     color: #ffbc9e;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .list {
@@ -46,7 +52,7 @@ a:active {
 
 .mainHeader .logo {
     margin-top: 9px;
-    margin-right: 27px;
+    margin-right: 24px;
 }
 
 .mainNavigation {
@@ -65,6 +71,17 @@ a:active {
     display: inline-block;
     margin-right: 25px;
     position: relative;
+    vertical-align: top;
+    padding-bottom: 8px;  
+}
+
+.siteNavigation a {
+    display: block;
+    vertical-align: middle;
+    padding: 7px 13px;
+    
+    padding: 7px 13px;
+	border-radius: 15px;
 }
 
 .siteNavigation li:last-child, .userNavigation li:last-child {
@@ -72,7 +89,6 @@ a:active {
 }
 
 .userNavigation li {
-    display: inline-block;
     margin-right: 8px;
 }
 
@@ -82,10 +98,25 @@ a:active {
     font-weight: 700;
 }
 
+.siteNavigation .navLink:hover {
+    color: #333;
+    font-weight: 700;
+    background-color: #f7f6f3;
+    text-decoration: none;
+    padding: 9px 13px 10px 14px;
+    border-radius: 20px;
+}
+
 .submenu {
     display: none;
     position: absolute;
-    z-index: 900;    
+    z-index: 900;
+    background-color: #f8f7f4;
+    border-radius: 5px; 
+    top: 38px;
+	left: -6px;
+    width: 143px;
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
 
 .catalogLink:hover  .submenu {
@@ -97,17 +128,19 @@ a:active {
     line-height: 16px;
     text-decoration: none;
     color: #323232;
+    display: block;
+    padding: 8px 20px;  
 }
 
 .submenu .newIcecream {
     font-weight: 700;
 }
 
-.submenu li:hover {
+.submenu a:hover {
     background-color: #fbded7;
 }
 
-.submenu li:active {
+.submenu a:active {
     background-color: #f6b5a5;
 }
 
@@ -127,20 +160,74 @@ a.catalogCurrent {
     text-decoration: none;
 }
 
+.userNavigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .userNavigation .userLink {
     font-weight: 500;
     color: #fff;
     font-size: 14px;
     line-height: 16px;
     text-decoration: none;
+    display: block;
+    background-color: rgba(161, 180, 169, 0.2);
+}
+
+.userNavigation .searchLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+}
+
+.searchLink:hover path {
+    fill: #000;
+}
+
+.userNavigation .entryLink {
+    display: flex;
+    width: 93px;
+    height: 33px;
+    padding-left: 16px;
+    padding-right: 13px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.entryLink path {
+    fill: #fff;
+}
+
+.entryLink:hover path {
+    fill: #000;
+}
+
+.userNavigation .basketLink {
+    display: flex;
+    width: 100px;
+    height: 33px;
+    padding-left: 16px;
+    padding-right: 13px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.basketLink:hover path {
+    fill: #000;
+}
+
+.basketLink:hover circle {
+    fill: #000;
 }
 
 .searchForm, .loginForm, .goodsChosen, .feedbackForm {
     display: none;
-}
-
-.userNavigation .userLink {
-    background-color: rgba(161, 180, 169, 0.2);
 }
 
 .userNavigation .userLink:hover {
@@ -259,8 +346,49 @@ a.catalogCurrent {
 
 .content p {
     width: 480px;
-    margin-left: 70px;
+    margin-left: 76px;
     margin-bottom: 9px;
+    position: relative;
+}
+
+.content p.ice::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -56px;
+    background-image: url('../img/ice-cream.svg');
+    width: 49px;
+    height: 49px;
+}
+
+.content p.leaf::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -56px;
+    background-image: url('../img/eco.svg');
+    width: 49px;
+    height: 49px;
+}
+
+.content p.cow::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -56px;
+    background-image: url('../img/cow.svg');
+    width: 49px;
+    height: 49px;
+}
+
+.content p.temperature::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: -56px;
+    background-image: url('../img/thermometer.svg');
+    width: 49px;
+    height: 49px;
 }
 
 .content p:nth-child(2) {
@@ -337,18 +465,19 @@ a.catalogCurrent {
 }
 
 .btn {
-    color: #fefefe;
     background-image: linear-gradient(to top, #e74a35, #f26843);
     font-size: 18px;
     line-height: 24px;
-    border-radius: 15px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
+    padding: 14px 20px 14px 20px;
 }
 
-.btn:hover {
+a.btn:hover {
     background-image: linear-gradient(to top, #e74a35, #f26843), 
     linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+    color: #fefefe;
 }
 
 .btn:active {
@@ -393,12 +522,67 @@ section.map {
 }
 
 .mainFooter .social {
-    width: 190px;
+    width: 210px;
     margin-right: 210px;
 }
 
+.social .socialButton {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: block;
+    margin-right: 11px;
+}
+
+
 .footerLinks {
     width: 330px; 
+}
+
+.social ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: flex-start;
+    
+}
+
+.social .socialTwitter {
+    background-image: url('../img/twitter.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+
+}
+
+.social .socialInstagram {
+    background-image: url('../img/instagram.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+
+}
+
+.social .socialFacebook {
+    background-image: url('../img/fb.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+
+}
+
+.social .socialVk {
+    background-image: url('../img/vk.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.8;
+
+}
+
+.social .socialButton:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 
 .footerCopyright {
@@ -409,10 +593,17 @@ section.map {
     font-size: 13px;
 }
 
+.footerLinks ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .footerCopyright {
     color: #fefefe;
     font-size: 12px;
     line-height: 18px;
+    display: flex;
+    flex-direction: column;
 }
 
 .logoLink {
@@ -452,6 +643,14 @@ section.map {
 }
 
 /* Страница каталога */
+
+.basketLink.activeLink {
+    width: 117px;
+}
+
+.basketLink.activeLink:hover section.goodsChosen {
+    display: block;
+}
 
 .workTime  {
     color: #fff;
@@ -521,10 +720,17 @@ ul.icecreamList {
     flex-direction: column;
     width: 267px;
     margin-right: 25px;
+    position: relative;
 }
 
-.icecreamImage {
+.icecreamItem .icecreamImage {
     order: -1;
+    margin-bottom: 0;
+}
+
+.iceInfo {
+    position: absolute;
+    top: 225px;
 }
 
 .icecreamList .icecreamLink {
@@ -532,6 +738,8 @@ ul.icecreamList {
     font-weight: 500;
     text-align: center;
     font-size: 16px;
+    display: block;
+    margin: 0 auto;
 }
 
 .itemPrice {
