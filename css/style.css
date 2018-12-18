@@ -21,7 +21,7 @@ a {
     font-weight: 500;
     color: #fff;
     line-height: 18px;
-    text-decoration-color: rgba(255, 255, 255, 0.3);
+    text-decoration: none;
 }
 
 a:hover {
@@ -52,7 +52,7 @@ img {
 
 .mainHeader .logo {
     margin-top: 9px;
-    margin-right: 24px;
+    margin-right: 10px;
 }
 
 .mainNavigation {
@@ -60,28 +60,18 @@ img {
 }
 
 .siteNavigation, .userNavigation {
-    padding-top: 20px;
+    padding-top: 22px;
 }
 
 .userNavigation {
     margin-left: auto;
 }
 
-.siteNavigation li {
+.siteNavigation > li {
     display: inline-block;
-    margin-right: 25px;
     position: relative;
     vertical-align: top;
     padding-bottom: 8px;  
-}
-
-.siteNavigation a {
-    display: block;
-    vertical-align: middle;
-    padding: 7px 13px;
-    
-    padding: 7px 13px;
-	border-radius: 15px;
 }
 
 .siteNavigation li:last-child, .userNavigation li:last-child {
@@ -96,14 +86,26 @@ img {
     line-height: 18px;
     color: #fff;
     font-weight: 700;
+    padding: 9px 13px 10px 14px;
+    display: block;
+	border-radius: 20px;
 }
 
-.siteNavigation .navLink:hover {
+.newIcecream::after {
+    content: "";
+    position: absolute;
+    width: 128px;
+    height: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    left: 6px;
+    top: 19px;
+}
+
+.siteNavigation .navLink:hover, .catalogLink:hover .catLink {
     color: #333;
     font-weight: 700;
     background-color: #f7f6f3;
     text-decoration: none;
-    padding: 9px 13px 10px 14px;
     border-radius: 20px;
 }
 
@@ -111,12 +113,12 @@ img {
     display: none;
     position: absolute;
     z-index: 900;
-    background-color: #f8f7f4;
-    border-radius: 5px; 
-    top: 38px;
+    background-color: #f8f7f4; 
+    top: 42px;
 	left: -6px;
     width: 143px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
 }
 
 .catalogLink:hover  .submenu {
@@ -129,11 +131,20 @@ img {
     text-decoration: none;
     color: #323232;
     display: block;
-    padding: 8px 20px;  
+    padding: 8px 10px 8px 20px;  
 }
 
-.submenu .newIcecream {
+.newIcecream a {
     font-weight: 700;
+}
+
+.newIcecream {
+    padding-bottom: 11px;
+    padding-top: 5px;
+}
+
+.submenuItem:last-child {
+    padding-bottom: 6px;
 }
 
 .submenu a:hover {
@@ -172,7 +183,7 @@ a.catalogCurrent {
     line-height: 16px;
     text-decoration: none;
     display: block;
-    background-color: rgba(161, 180, 169, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .userNavigation .searchLink {
@@ -218,11 +229,11 @@ a.catalogCurrent {
     border-radius: 15px;
 }
 
-.basketLink:hover path {
+.indexLink:hover path {
     fill: #000;
 }
 
-.basketLink:hover circle {
+.indexLink:hover circle {
     fill: #000;
 }
 
@@ -235,34 +246,108 @@ a.catalogCurrent {
     background-color: #f8f7f4;
 }
 
+.siteWrapper {
+    min-width: 940px;
+    background-color: #849d8f;
+    background-image: url("../img/slider_ice1.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    transition: background-image 0.5s ease, background-color 0.5s ease;
+}
+
+.siteWrapper::before,
+.siteWrapper::after {
+  content: "";
+  visibility: hidden;
+}
+
+.siteWrapper::before {
+  background-image: url("../img/slider_ice2.png");
+}
+
+.siteWrapper::after {
+  background-image: url("../img/slider_ice3.png");
+}
+
+.slider {
+    position: relative;
+    padding-top: 275px;
+    text-align: center;
+}
+
+.sliderList {
+    margin-bottom: 40px;
+}
+
 .sliderItem h2 {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 60px;
     line-height: 60px;
     color: #fff;
     text-align: center;
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 27px;
 }
+
+.sliderItem.slide {
+    display: none;
+  }
 
 .sliderItem .btnSlider {
     font-size: 32px;
     line-height: 44px;
+    padding: 12px 44px;
+    text-align: center;
+    vertical-align: top;
+    text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
 }
 
-.sliderItem:first-child {
-    background-image: url('../img/slider_ice1.png');
-    background-repeat: no-repeat;
+.sliderControls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    z-index: 20;
+    font-size: 0;
+  }
+
+.sliderControls label {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-right: 8px;
+    vertical-align: top;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.sliderItem:nth-child(2) {
+#product-1:checked ~ .siteWrapper {
+    background-color: #849d8f;
+    background-image: url("../img/slider_ice1.png");
+  }
+  
+  #product-2:checked ~ .siteWrapper {
     background-color: #8996a6;
-    background-image: url('../img/slider_ice2.png');
-    background-repeat: no-repeat;
+    background-image: url("../img/slider_ice2.png");
+  }
+  
+  #product-3:checked ~ .siteWrapper {
+    background-color: #9d8b84;
+    background-image: url("../img/slider_ice3.png");
+  }
+
+    #product-1:checked ~ .siteWrapper #slide1,
+    #product-2:checked ~ .siteWrapper #slide2,
+    #product-3:checked ~ .siteWrapper #slide3 {
+    display: block;
 }
 
-.sliderItem:nth-child(3) {
-    background-color: #9d8b84;
-    background-image: url('../img/slider_ice3.png');
-    background-repeat: no-repeat;
+    #product-1:checked ~ .siteWrapper label[for="product-1"],
+    #product-2:checked ~ .siteWrapper label[for="product-2"],
+    #product-3:checked ~ .siteWrapper label[for="product-3"] {
+    background-color: #ffffff;
 }
 
 .gifts {
@@ -276,6 +361,8 @@ a.catalogCurrent {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 23px;
+    position: relative;
+    padding-top: 16px;
 }
 
 .gifts .giftRaspberry {
@@ -294,8 +381,8 @@ a.catalogCurrent {
     color: #fff;
     font-size: 18px;
     font-weight: 700;
-    margin-top: 20px;
-    margin-bottom: 45px;
+    margin-top: 16px;
+    margin-bottom: 90px;
 }
 
 .giftContainer h3 {
@@ -303,8 +390,21 @@ a.catalogCurrent {
     font-size: 35px;
     line-height: 41px;
     font-weight: 700;
-    margin-top: 23px;
+    margin-top: 0;
     margin-bottom: 0;
+}
+
+.giftContainer .btn {
+    position: absolute;
+    top: 160px;
+}
+
+.giftRaspberry .btn {
+    left: 375px;
+}
+
+.giftChoco .btn {
+    left: 350px;
 }
 
 .indexPageList .icecreamItem:nth-child(4n) {
@@ -312,7 +412,16 @@ a.catalogCurrent {
 }
 
 .icecreamList.indexPageList {
-    margin-bottom: 40px;
+    margin-bottom: 5px;
+}
+
+.indexPageList .hit::before {
+    content: "";
+    background-image: url('../img/hit.svg');
+    position: absolute;
+    height: 61px;
+    width: 61px;
+    top: 5px;
 }
 
 .icecreamImage img {
@@ -325,6 +434,7 @@ a.catalogCurrent {
     line-height: 30px;
     margin-left: 20px;
     margin-bottom: 10px;
+    margin-top: 19px;
 }
 
 .shopDescription {
@@ -334,7 +444,7 @@ a.catalogCurrent {
     background-size: cover;
     border-radius: 15px;
     padding-top: 6px;
-    padding-bottom: 17px;
+    padding-bottom: 15px;
     margin-bottom: 40px;
 }
 
@@ -349,12 +459,25 @@ a.catalogCurrent {
     margin-left: 76px;
     margin-bottom: 9px;
     position: relative;
+    margin-top: 10px;
+}
+
+p.leaf {
+    margin-top: 13px;
+}
+
+p.cow, p.temperature {
+    margin-left: 86px;
+}
+
+p.temperature {
+    margin-top: 13px;
 }
 
 .content p.ice::before {
     content: "";
     position: absolute;
-    top: -15px;
+    top: -14px;
     left: -56px;
     background-image: url('../img/ice-cream.svg');
     width: 49px;
@@ -364,7 +487,7 @@ a.catalogCurrent {
 .content p.leaf::before {
     content: "";
     position: absolute;
-    top: -15px;
+    top: -14px;
     left: -56px;
     background-image: url('../img/eco.svg');
     width: 49px;
@@ -374,7 +497,7 @@ a.catalogCurrent {
 .content p.cow::before {
     content: "";
     position: absolute;
-    top: -15px;
+    top: -14px;
     left: -56px;
     background-image: url('../img/cow.svg');
     width: 49px;
@@ -384,7 +507,7 @@ a.catalogCurrent {
 .content p.temperature::before {
     content: "";
     position: absolute;
-    top: -15px;
+    top: -14px;
     left: -56px;
     background-image: url('../img/thermometer.svg');
     width: 49px;
@@ -413,14 +536,14 @@ a.catalogCurrent {
     width: 560px;
     min-height: 200px;
     padding-left: 20px;
-    padding-top: 15px;
+    padding-top: 13px;
 }
 
 .blog .blogHeading {
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
-    margin-bottom: 10px;
+    margin-bottom: 4px;
 }
 
 .blog .blogLink {
@@ -429,7 +552,8 @@ a.catalogCurrent {
     line-height: 30px;
     color: #323232;
     display: block;
-    width: 280px;
+    width: 281px;
+    text-decoration: underline;
 }
 
 .subscribe {
@@ -438,6 +562,10 @@ a.catalogCurrent {
     background-size: cover;
     border-radius: 15px;
     width: 560px;
+}
+
+.subscribe .btn {
+    padding: 10px 19px 10px 19px;
 }
 
 .subscribeContainer {
@@ -455,33 +583,52 @@ a.catalogCurrent {
 
 .subscribeContainer .subscribeParagraph {
     color: #5a5a5a;
-    margin-top: 33px;
+    margin-top: 27px;
     margin-bottom: 35px;
 }
 
-.subscribeForm input {
+.subscribeForm {
+    display: flex;
+}
+
+.subscribeForm .emailInput {
     line-height: 24px;
     color: #999;
+    border: solid 1px rgba(178, 178, 178, 0.52);
+    border-radius: 5px;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 9px 15px;
+    flex-grow: 1;
+    margin-right: 11px;
+    height: 44px;
+    min-width: 210px;
 }
 
 .btn {
-    background-image: linear-gradient(to top, #e74a35, #f26843);
+    background: #f26843;
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
     font-size: 18px;
     line-height: 24px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
-    padding: 14px 20px 14px 20px;
+    padding: 8px 23px 12px;
+    display: inline-block;
+    box-shadow: 0px 2px 2px 0 rgba(172, 16, 0, 0.64);
+    color: #fefefe;
+    border: none;
+    cursor: pointer;
 }
 
-a.btn:hover {
-    background-image: linear-gradient(to top, #e74a35, #f26843), 
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
-    color: #fefefe;
+.btn:hover {
+    background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+    box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 .btn:active {
-    background-image: linear-gradient(to bottom, #e74a35, #f26843), linear-gradient(to bottom, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07));
+    background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+    box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
 section.map {
@@ -498,23 +645,42 @@ section.map {
     border-radius: 15px;
     position: absolute; 
     top: 63px;
-    left: 871px;
+    left: 903px;
     text-align: left;
 }
 
 .mapText .address {
     font-size: 14px;
     line-height: 20px;
-    margin-top: 32px;
+    margin-top: 29px;
+}
+
+.address .addressLine {
+    width: 148px;
+    display: block;
 }
 
 .address b {
     font-size: 18px;
     line-height: 24px;
+    display: block;
+}
+
+.address .companyAddress {
+    margin-bottom: 19px;
+}
+
+.address .companyPhone {
+    margin-top: 5px;
+}
+
+.mapText .mapBtn {
+    padding: 10px 27px;
+    margin-top: 10px;
 }
 
 .mainFooter {
-    padding: 35px 0;
+    padding-bottom: 26px;
 }
 
 .mainFooter .container {
@@ -524,71 +690,97 @@ section.map {
 .mainFooter .social {
     width: 210px;
     margin-right: 210px;
+    padding-top: 30px;
 }
 
 .social .socialButton {
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.5);
     display: block;
     margin-right: 11px;
+    border: 3px solid rgba(255, 255, 255, 0.5);
+    position: relative;
 }
 
-
 .footerLinks {
-    width: 330px; 
+    width: 330px;
+    padding-top: 25px;
 }
 
 .social ul {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    justify-content: flex-start;
-    
+    justify-content: flex-start;  
 }
 
-.social .socialTwitter {
+.social .socialTwitter::before {
+    content: "";
+    position: absolute;
     background-image: url('../img/twitter.svg');
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.8;
-
+    height: 32px;
+    width: 32px;
+    left: 0;
+    top: 0;
 }
 
-.social .socialInstagram {
+.socialTwitter::before:hover {
+    opacity: 1;
+}
+
+.social .socialInstagram::before {
+    content: "";
+    position: absolute;
     background-image: url('../img/instagram.svg');
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.8;
-
+    height: 32px;
+    width: 32px;
+    left: 0;
+    top: 0;
 }
 
-.social .socialFacebook {
+.social .socialFacebook::before {
+    content: "";
+    position: absolute;
     background-image: url('../img/fb.svg');
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.8;
-
+    height: 32px;
+    width: 32px;
+    left: 0;
+    top: 0;
 }
 
-.social .socialVk {
+.social .socialVk::before {
+    content: "";
+    position: absolute;
     background-image: url('../img/vk.svg');
     background-repeat: no-repeat;
     background-position: center;
     opacity: 0.8;
-
+    height: 32px;
+    width: 32px;
+    left: 0;
+    top: 0;
 }
 
 .social .socialButton:hover {
     opacity: 1;
-    background-color: rgba(255, 255, 255, 0.7);
+    border-color: rgba(255, 255, 255, 0.7);
 }
 
 .footerCopyright {
-    width: 185px;
+    width: 190px;
     margin-left: auto;
 }
+
 .footerLinks a {
     font-size: 13px;
 }
@@ -598,12 +790,32 @@ section.map {
     flex-wrap: wrap;
 }
 
+.furtherLinks li {
+    min-width: 143px;
+    position: relative;
+} 
+
+.furtherLinks li:first-child::before {
+    content: "";
+    background-image: url('../img/heart.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 13px;
+    width: 15px;
+    position: absolute;
+    top: 5px;
+    left: -20px;
+}
+
 .footerCopyright {
     color: #fefefe;
     font-size: 12px;
     line-height: 18px;
-    display: flex;
-    flex-direction: column;
+    padding-top: 13px;
+}
+
+.footerCopyright p {
+    margin-top: 0;
 }
 
 .logoLink {
@@ -671,13 +883,37 @@ span.workTime, span.phoneNumber {
     display: block;  
 }
 
+.shopInfo {
+    position: absolute;
+    top: 75px;
+    right: 0;
+    padding-right: 57px;
+    text-align: right;
+}
+
 .breadcrumbs {
     list-style: none;
+    margin-top: 17px;
+}
+
+.breadcrumbs li {
+    position: relative;
+}
+
+.breadcrumbs li::after {
+    content: "»";
+    position: absolute;
+    color: #fff;
+    left: 60px;
+}
+
+.breadcrumbs li:last-child::after {
+    content: "";
 }
 
 .breadcrumbs li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 17px;
 }
 
 .breadcrumbs a {
@@ -699,7 +935,7 @@ span.workTime, span.phoneNumber {
     line-height: 41px;
     font-weight: 700;
     margin-bottom: 30px;
-    margin-top: 13px;
+    margin-top: 3px;
 }
 
 .icecreamContainer {
@@ -711,8 +947,8 @@ span.workTime, span.phoneNumber {
 ul.icecreamList {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
-    margin-bottom: 83px;
+    margin-top: 34px;
+    margin-bottom: 45px;
 }
 
 .icecreamItem {
@@ -723,14 +959,19 @@ ul.icecreamList {
     position: relative;
 }
 
+.icecreamItem h2 {
+    margin-top: 10px;
+}
+
 .icecreamItem .icecreamImage {
     order: -1;
     margin-bottom: 0;
+    margin-top: 6px;
 }
 
 .iceInfo {
     position: absolute;
-    top: 225px;
+    top: 214px;
 }
 
 .icecreamList .icecreamLink {
@@ -740,7 +981,45 @@ ul.icecreamList {
     font-size: 16px;
     display: block;
     margin: 0 auto;
+    margin-bottom: 11px;
 }
+
+.showBtn {
+    display: none;
+    position: absolute;
+    bottom: -35px;
+    left: 30px;  
+    padding: 15px 18px;
+    color: #fefefe;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    border-radius: 100px;
+}
+
+.linkUnderline {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.icecreamItem:hover .showBtn {
+    display: block;
+    z-index: 6;
+}
+
+.icecreamItem:hover::before  {
+    position: absolute;
+    z-index: 5;
+    content: "";  
+    display: block;
+    top: 0;
+    left: -15px;
+    width: 293px;
+    height: 405px;
+    border-radius: 5px;  
+    background-color: rgba(255,255,255, 0.2);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+    
+  }
 
 .itemPrice {
     font-size: 45px;
@@ -821,12 +1100,43 @@ ul.icecreamList {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
+    margin-bottom: 35px;
+    position: relative;
+}
+
+.paginationList::after {
+    content: "";
+    position: absolute;
+    width: 1146px;
+    height: 1px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    left: 0px;
+    top: 55px;
 }
 
 .paginationItem {
     line-height: 18px;
     font-weight: 500;
     margin-right: 5px;
+    position: relative;
+}
+
+.paginationItem:last-child {
+    margin-left: 26px;
+}
+
+.paginationPrevious {
+    position: absolute;
+    color: #fff;
+    opacity: 0.2;
+    right: 190px;
+    font-size: 21px;
+    top: 0px;
+}
+
+.paginationNext {
+    color: #fff;
+    font-size: 21px;
 }
 
 .paginationItem:last-child {
