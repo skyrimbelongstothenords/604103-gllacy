@@ -31,7 +31,7 @@
                      <li><a href="about.html" class="navLink"><span class="linkUnderline">О Компании</span></a></li>
                   </ul>
                   <ul class="userNavigation list">
-                     <li>
+                     <li class="searching">
                         <a href="#" class="userLink searchLink">
                            <span class="visuallyHidden">Поиск</span>
                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17">
@@ -44,10 +44,10 @@
                            <button type="submit" class="visuallyHidden">Искать</button>
                         </form>
                      </li>
-                     <li>
+                     <li class="entering">
                         <a href="login.html" class="userLink entryLink">
                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19" viewBox="0 0 21 19">
-                              <g fill="#000">
+                              <g fill="#fff">
                                  <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z"/>
                                  <path d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z"/>
                               </g>
@@ -63,8 +63,8 @@
                            </p>
                            <button type="submit" class="btn">Войти</button>
                            <p class="informationSection">
-                              <a href="#" class="linkForm">Забыли пароль?</a>
-                              <a href="#" class="linkForm">Новая регистрация</a>
+                              <a href="#" class="linkForm"><span class="linkUnderline">Забыли пароль?</span></a>
+                              <a href="#" class="linkForm linkFormRegister"><span class="linkUnderline">Новая регистрация</span></a>
                            </p>
                         </form>
                      </li>
@@ -82,8 +82,10 @@
                      </li>
                   </ul>
                </nav>
+               <div class="shopInfoIndex">
                <span class="workTime">С 10 до 20, ежедневно</span>
                <span class="phoneNumber">8 812 450-25-25</span>
+                </div>
             </div>
          </header>
          <main>
@@ -124,48 +126,56 @@
                </section>
                <ul class="icecreamList list indexPageList">
                   <li class="icecreamItem">
+                        <div class="icecreamListContent">
                      <h2><a href="#" class="icecreamLink"><span class="linkUnderline">Сливочное с апельсиновым джемом и цитрусовой стружкой</span></a></h2>
                      <p class="icecreamImage">
                         <img src="img/1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом">
                         <span class="hit"></span>
                      </p>
-                     <div class="iceInfo"><span class="itemPrice">310 ₽</span>
+                     <div class="iceInfo"><span class="itemPrice">310₽</span>
                         <span class="itemWeight">/кг</span> 
                      </div>
                      <a class="showBtn btn" href="#">Быстрый просмотр</a> 
+                     </div>
                   </li>
                   <li class="icecreamItem">
+                        <div class="icecreamListContent">
                      <h2><a href="#" class="icecreamLink"><span class="linkUnderline">Сливочно-кофейное с кусочками шоколада</span></a></h2>
                      <p class="icecreamImage">
                         <img src="img/2.jpg" width="267" height="267" alt="Сливочное-кофейное с кусочками шоколада">
                         <span class="hit"></span>
                      </p>
-                     <div class="iceInfo"><span class="itemPrice">380 ₽</span>
+                     <div class="iceInfo"><span class="itemPrice">380₽</span>
                         <span class="itemWeight">/кг</span>
                      </div>
                      <a class="showBtn btn" href="#">Быстрый просмотр</a> 
+                     </div>
                   </li>
                   <li class="icecreamItem">
+                        <div class="icecreamListContent">
                      <h2><a href="#" class="icecreamLink"><span class="linkUnderline">Сливочно-клубничное с присыпкой из белого шоколада</span></a></h2>
                      <p class="icecreamImage">
                         <img src="img/3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой">
                         <span class="hit"></span>
                      </p>
-                     <div class="iceInfo"><span class="itemPrice">355 ₽</span>
+                     <div class="iceInfo"><span class="itemPrice">355₽</span>
                         <span class="itemWeight">/кг</span>
                      </div>
                      <a class="showBtn btn" href="#">Быстрый просмотр</a> 
+                     </div>
                   </li>
                   <li class="icecreamItem">
+                        <div class="icecreamListContent">
                      <h2><a href="#" class="icecreamLink"><span class="linkUnderline">Сливочное крем-брюле с карамельной подливкой</span></a></h2>
                      <p class="icecreamImage">
                         <img src="img/4.jpg" width="267" height="267" alt="Сливочное крем-брюле">
                         <span class="hit"></span>
                      </p>
-                     <div class="iceInfo"><span class="itemPrice">415 ₽</span>
+                     <div class="iceInfo"><span class="itemPrice">415₽</span>
                         <span class="itemWeight">/кг</span>
                      </div>
                      <a class="showBtn btn" href="#">Быстрый просмотр</a> 
+                     </div>
                   </li>
                </ul>
                <section class="shopDescription">
@@ -206,15 +216,17 @@
                </div>
             </div>
             <section class="map">
-               <div class="mapText">
-                  <h3 class="visuallyHidden">Как нас найти</h3>
-                  <p class="address">
-                     <span class="addressLine">Адрес главного офиса и офлайн-магазина:</span> <b class="companyAddress">ул. Большая Конюшенная 19/8, Санкт-Петербург</b> Для заказов по телефону:
-                     <b class="companyPhone">8 812 450-25-25</b>
-                     (с 10 до 20 ежедневно)
-                  </p>
-                  <a href="#" class="btn mapBtn">Форма обратной связи</a>
-               </div>
+                <div class="container">
+                    <div class="mapText">
+                        <h3 class="visuallyHidden">Как нас найти</h3>
+                        <p class="address">
+                        <span class="addressLine">Адрес главного офиса и офлайн-магазина:</span> <b class="companyAddress">ул. Большая Конюшенная 19/8, Санкт-Петербург</b> Для заказов по телефону:
+                        <b class="companyPhone">8 812 450-25-25</b>
+                        (с 10 до 20 ежедневно)
+                        </p>
+                        <a href="#" class="btn mapBtn">Форма обратной связи</a>
+                    </div>
+                </div>
                <img src="img/map.jpg" alt="Карта местоположения магазина" width="1200" height="430">
             </section>
          </main>
@@ -238,7 +250,7 @@
                </div>
                <div class="footerCopyright">
                   <a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Сайт компании HTML Academy"><img src="img/logo-htmlacademy.svg" alt="HTML academy logo" width="108" height="39"></a> 
-                  <p>Сделано в <a class="logoLink" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> &copy; 2017</p>
+                  <p>Сделано в <a class="logoLink" href="https://htmlacademy.ru/intensive/htmlcss"><span class="linkUnderline">HTML Academy</span></a> &copy; 2017</p>
                </div>
             </div>
          </footer>
@@ -250,8 +262,8 @@
             <label for="emailForm" class="visuallyHidden">Ваша электронная почта</label>
             <input type="email" name="email" placeholder="Ваша почта для ответа?" id="emailForm">
             <label for="feedbackForm" class="visuallyHidden">Место для вашего комментария</label>
-            <textarea name="comment" placeholder="Напишите что-нибудь..." rows="10" id="feedbackForm"></textarea>
-            <button type="submit" name="submit" class="btn">Отправить</button> 
+            <textarea name="comment" placeholder="Напишите что-нибудь..." rows="6" id="feedbackForm"></textarea>
+            <p class="feedbackButton"><button type="submit" name="submit" class="btn">Отправить</button></p> 
          </form>
       </div>
    </body>

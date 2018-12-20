@@ -18,18 +18,9 @@ body {
 }
 
 a {
-    font-weight: 500;
     color: #fff;
     line-height: 18px;
     text-decoration: none;
-}
-
-a:hover {
-    color: #ffbc9e;
-}
-
-a:active {
-    color: #ffbc9e;
 }
 
 img {
@@ -47,6 +38,7 @@ img {
     width: 1200px;
     margin: 0 auto;
     padding: 0 27px;
+    position: relative;
     
 }
 
@@ -86,19 +78,21 @@ img {
     line-height: 18px;
     color: #fff;
     font-weight: 700;
-    padding: 9px 13px 10px 14px;
+    padding: 9px 13px 10px 12px;
     display: block;
-	border-radius: 20px;
+    border-radius: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .newIcecream::after {
     content: "";
     position: absolute;
     width: 128px;
-    height: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    height: 1px;
+    background: rgba(0, 0, 0, 0.2);
     left: 6px;
-    top: 19px;
+    top: 38px;
 }
 
 .siteNavigation .navLink:hover, .catalogLink:hover .catLink {
@@ -114,7 +108,7 @@ img {
     position: absolute;
     z-index: 900;
     background-color: #f8f7f4; 
-    top: 42px;
+    top: 40px;
 	left: -6px;
     width: 143px;
     box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
@@ -131,7 +125,7 @@ img {
     text-decoration: none;
     color: #323232;
     display: block;
-    padding: 8px 10px 8px 20px;  
+    padding: 6px 10px 8px 20px;  
 }
 
 .newIcecream a {
@@ -140,7 +134,7 @@ img {
 
 .newIcecream {
     padding-bottom: 11px;
-    padding-top: 5px;
+    padding-top: 3px;
 }
 
 .submenuItem:last-child {
@@ -164,11 +158,15 @@ img {
     color: #333;
 }
 
-a.catalogCurrent {
+.catalogLink a.catalogCurrent {
     color: #fff;
     background-color: #d07058;
     font-weight: 700;
     text-decoration: none;
+}
+
+.navLink:active {
+    box-shadow: inset 0px 2px 1px 0 #696969;
 }
 
 .userNavigation {
@@ -184,6 +182,7 @@ a.catalogCurrent {
     text-decoration: none;
     display: block;
     background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
 }
 
 .userNavigation .searchLink {
@@ -193,6 +192,38 @@ a.catalogCurrent {
     width: 33px;
     height: 33px;
     border-radius: 50%;
+    position: relative;
+}
+
+.searching:hover .searchForm {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 59px;
+    left: 621px;
+    min-width: 341px;
+    box-sizing: border-box;
+    padding: 20px 15px;
+    background-color: #f8f7f4;
+    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+
+.catalogSearching:hover .searchForm {
+    left: 608px;
+}
+
+.searchForm input {
+    padding-top: 9px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #999;
+    line-height: 24px;
+    font-size: 14px;
+    min-width: 311px;
+    border: 1px solid #d3d3d2;
 }
 
 .searchLink:hover path {
@@ -203,18 +234,85 @@ a.catalogCurrent {
     display: flex;
     width: 93px;
     height: 33px;
-    padding-left: 16px;
-    padding-right: 13px;
-    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 14px;
+    justify-content: space-around;
     align-items: center;
     border-radius: 15px;
 }
 
-.entryLink path {
-    fill: #fff;
+.entering:hover .loginForm {
+    display: flex;
+    position: absolute;
+    width: 277px;
+    box-sizing: border-box;
+    padding: 5px 17px 4px 19px;
+    background-color: #f8f7f4;
+    box-shadow: 0px 20px 20px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    top: 59px;
+    left: 786px;
+    z-index: 20;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-.entryLink:hover path {
+.catalogEntering:hover .loginForm {
+    left: 770px;
+}
+
+.loginForm input {
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #999;
+    line-height: 24px;
+    font-size: 14px;
+    border: 1px solid #d3d3d2;
+    width: 100%;
+}
+
+.userForm input[type="email"] {
+    margin-bottom: 20px;
+}
+
+p.userForm {
+    margin-bottom: 20px;
+}
+
+.loginForm .btn {
+    padding: 9px 25px;
+    padding-top: 10px;
+    box-sizing: border-box;
+    width: 100px;
+    display: inline-block;
+}
+
+.informationSection {
+    width: 120px;
+    margin-left: 20px;
+    margin-top: 0;
+}
+
+.informationSection .linkForm {
+    font-size: 13px;
+    line-height: 24px;
+    color: #323232;
+    font-weight: normal;
+    display: block;
+}
+
+.informationSection .linkFormRegister {
+    margin-top: -3px;
+}
+
+.informationSection .linkUnderline {
+    border-color: rgba(0, 0, 0, 0.3);
+}
+
+.entryLink:hover g {
     fill: #000;
 }
 
@@ -222,18 +320,14 @@ a.catalogCurrent {
     display: flex;
     width: 100px;
     height: 33px;
-    padding-left: 16px;
+    padding-left: 14px;
     padding-right: 13px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     border-radius: 15px;
 }
 
-.indexLink:hover path {
-    fill: #000;
-}
-
-.indexLink:hover circle {
+.indexLink:hover g {
     fill: #000;
 }
 
@@ -297,7 +391,7 @@ a.catalogCurrent {
 .sliderItem .btnSlider {
     font-size: 32px;
     line-height: 44px;
-    padding: 12px 44px;
+    padding: 11px 38px 11px 39px;
     text-align: center;
     vertical-align: top;
     text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
@@ -435,6 +529,7 @@ a.catalogCurrent {
     margin-left: 20px;
     margin-bottom: 10px;
     margin-top: 19px;
+    letter-spacing: 0.01em;
 }
 
 .shopDescription {
@@ -556,6 +651,10 @@ p.temperature {
     text-decoration: underline;
 }
 
+.blog .blogLink:hover {
+    color: #e84d37;
+}
+
 .subscribe {
     background-image: url('../img/bg-post.svg');
     background-repeat: no-repeat;
@@ -645,7 +744,7 @@ section.map {
     border-radius: 15px;
     position: absolute; 
     top: 63px;
-    left: 903px;
+    left: 871px;
     text-align: left;
 }
 
@@ -776,6 +875,11 @@ section.map {
     border-color: rgba(255, 255, 255, 0.7);
 }
 
+.social .socialButton:active {
+    opacity: 0.8;
+    border: 4px solid rgba(255, 255, 255, 0.7);
+}
+
 .footerCopyright {
     width: 190px;
     margin-left: auto;
@@ -833,16 +937,33 @@ section.map {
     height: 443px;
     border-radius: 10px;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .feedbackForm .close {
     position: absolute;
     left: 450px; /* Примерное, чтобы не мешалось*/
     top: 10px;
+    width: 18px;
+    height: 17px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.feedbackForm .close::before {
+    position: absolute;
+    content: "";
+    background: url("../img/cross-big.svg");
+    width: 18px;
+    height: 17px;
+    left: -7px;
+    top: 4px;
 }
 
 .feedbackForm .feedbackText {
-    margin-top: 19px;
+    margin-top: 15px;
     margin-bottom: 20px;
     font-size: 24px;
     line-height: 28px;
@@ -852,16 +973,181 @@ section.map {
 .feedbackForm input, .feedbackForm textarea {
     line-height: 24px;
     color: #999999;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+.feedbackForm input[type="text"] {
+    padding-top: 9px;
+    padding-bottom: 9px;
+    padding-left: 13px;
+    width: 267px;
+    margin-bottom: 20px;
+}
+
+.feedbackForm input[type="email"] {
+    padding-top: 8px;
+    padding-bottom: 9px;
+    padding-left: 11px;
+    width: 267px;
+    margin-bottom: 20px;
+}
+
+.feedbackForm textarea {
+    padding-top: 8px;
+    padding-left: 11px;
+    margin-bottom: 8px;
+}
+
+.feedbackButton {
+    display: flex;
+    justify-content: flex-end;
 }
 
 /* Страница каталога */
 
 .basketLink.activeLink {
     width: 117px;
+    color: #323232;
+    background: #fff;
 }
 
-.basketLink.activeLink:hover section.goodsChosen {
+.buying:hover .goodsChosen {
+    position: absolute;
+    top: 58px;
+    right: 28px;
+    width: 539px;
+    padding: 20px 14px;
+    padding-right: 12px;
+    padding-bottom: 21px;
+    font-size: 13px;
+    line-height: 16px;
+    color: #323232;
+    z-index: 25;
+    background-color: #f8f7f4;
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
     display: block;
+    box-sizing: border-box;
+}
+
+.goodsChosen .goodsRow, .goodsBuy {
+    font-size: 13px;
+    line-height: 16px;
+    color: #323232;
+    font-weight: normal;
+}
+
+.goodsRow .goodsClose {
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    width: 13px;
+    height: 13px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.goodsRow .secondRow {
+    margin-top: -5px;
+}
+
+.goodsRow .goodsClose::before {
+    transform: rotate(45deg);
+}
+
+.goodsRow .goodsClose::after {
+    transform: rotate(-45deg);
+}
+
+.goodsRow .goodsClose::after, .goodsRow .goodsClose::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    right: 0px;
+    width: 15px;
+    height: 1px;
+    background-color: #231f20;
+}
+
+.goodsBuy {
+    margin: 0;
+    padding-top: 0px;
+    margin-right: 26px;
+    width: 220px;
+    display: inline-block;
+}
+
+.goodsFeatures {
+    width: 97px;
+    margin: 0;
+    padding-top: 8px;
+    margin-right: 25px;
+}
+
+.goodsTotal {
+    display: inline-block;
+    width: 58px;
+    margin-right: 0;
+    margin: 0;
+    padding-top: 8px;
+}
+
+.firstGoods {
+    vertical-align: top;
+    padding-top: 8px;
+}
+
+.goodsRow img {
+    border-radius: 50%;
+    margin-right: 9px;
+}
+
+.goodsRow {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-left: 30px;
+}
+
+.totalPrice::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    right: 0px;
+    width: 512px;
+    height: 1px;
+    background-color: #cacac7;
+}
+
+.goodsChosen .goodsPrice {
+    color: #999;
+    display: inline-block;
+}
+
+.totalPrice {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 0;
+    position: relative;
+    padding-top: 13px;
+}
+
+.totalPrice .total {
+    font-weight: 700;
+    font-size: 15px;
+    color: #323232;
+}
+
+.totalPrice .btn {
+    margin-top: 13px;
+    padding-left: 14px;
+    padding-right: 14px;
 }
 
 .workTime  {
@@ -886,7 +1172,7 @@ span.workTime, span.phoneNumber {
 .shopInfo {
     position: absolute;
     top: 75px;
-    right: 0;
+    right: -30px;
     padding-right: 57px;
     text-align: right;
 }
@@ -894,6 +1180,10 @@ span.workTime, span.phoneNumber {
 .breadcrumbs {
     list-style: none;
     margin-top: 17px;
+}
+
+.breadcrumbs a:hover {
+    color: #ffbc9e;
 }
 
 .breadcrumbs li {
@@ -948,19 +1238,28 @@ ul.icecreamList {
     display: flex;
     flex-wrap: wrap;
     margin-top: 34px;
-    margin-bottom: 45px;
+    margin-bottom: 52px;
+}
+
+.icecreamListContent {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
 }
 
 .icecreamItem {
-    display: flex;
-    flex-direction: column;
     width: 267px;
-    margin-right: 25px;
+    margin-right: 26px;
     position: relative;
 }
 
 .icecreamItem h2 {
-    margin-top: 10px;
+    margin-top: 8px;
+}
+
+.icecreamItem .thirdRow {
+    margin-top: 11px;
 }
 
 .icecreamItem .icecreamImage {
@@ -971,7 +1270,7 @@ ul.icecreamList {
 
 .iceInfo {
     position: absolute;
-    top: 214px;
+    top: 215px;
 }
 
 .icecreamList .icecreamLink {
@@ -984,12 +1283,17 @@ ul.icecreamList {
     margin-bottom: 11px;
 }
 
+.icecreamItem .shorterLink {
+    width: 195px;
+}
+
 .showBtn {
     display: none;
     position: absolute;
-    bottom: -35px;
+    bottom: -30px;
     left: 30px;  
-    padding: 15px 18px;
+    padding: 12px 17px;
+    padding-bottom: 13px;
     color: #fefefe;
     font-size: 18px;
     font-weight: 700;
@@ -999,6 +1303,10 @@ ul.icecreamList {
 
 .linkUnderline {
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mainFooter .linkUnderline:hover {
+    color: #ffbc9e;
 }
 
 .icecreamItem:hover .showBtn {
@@ -1014,12 +1322,15 @@ ul.icecreamList {
     top: 0;
     left: -15px;
     width: 293px;
-    height: 405px;
+    min-height: 405px;
     border-radius: 5px;  
     background-color: rgba(255,255,255, 0.2);
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
-    
   }
+
+.icecreamItem:hover {
+    z-index: 15;
+}
 
 .itemPrice {
     font-size: 45px;
@@ -1100,8 +1411,12 @@ ul.icecreamList {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
-    margin-bottom: 35px;
+    margin-bottom: 32px;
     position: relative;
+    align-items: center;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
 }
 
 .paginationList::after {
@@ -1111,32 +1426,17 @@ ul.icecreamList {
     height: 1px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
     left: 0px;
-    top: 55px;
+    top: 52px;
 }
 
 .paginationItem {
     line-height: 18px;
     font-weight: 500;
-    margin-right: 5px;
-    position: relative;
+    margin-right: 3px;
 }
 
 .paginationItem:last-child {
     margin-left: 26px;
-}
-
-.paginationPrevious {
-    position: absolute;
-    color: #fff;
-    opacity: 0.2;
-    right: 190px;
-    font-size: 21px;
-    top: 0px;
-}
-
-.paginationNext {
-    color: #fff;
-    font-size: 21px;
 }
 
 .paginationItem:last-child {
@@ -1148,7 +1448,11 @@ ul.icecreamList {
     color: #fff;
     display: block;
     border-radius: 50%;
-    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 26px;
+    height: 26px;
 }
 
 .paginationItem .paginationLink:hover {
@@ -1157,9 +1461,33 @@ ul.icecreamList {
     cursor: pointer;
 }
 
+.paginationItem .paginationLink:active {
+    background-color: #ffffff;
+    color: #323232;
+}
+
+.paginationArrowForward, .paginationArrowBack {
+    display: block;
+    width: 8px;
+    height: 12px;
+    background: url(../img/icon-right-small.svg) no-repeat;
+    cursor: pointer;
+}
+
+.paginationArrowBack {
+    opacity: 0.2;
+    margin-right: 16px;
+    transform: rotate(180deg);
+    align-self: center;
+}
+
+.paginationArrowForward {
+    margin-left: 13px;
+    align-self: center;
+}
 
 .paginationItem .paginationItemCurrent {
-    background-color: #fff;
+    background: #fff;
     color: #323232;
 }
 
