@@ -18,8 +18,6 @@ body {
 }
 
 a {
-    color: #fff;
-    line-height: 18px;
     text-decoration: none;
 }
 
@@ -53,6 +51,10 @@ img {
 
 .siteNavigation, .userNavigation {
     padding-top: 22px;
+}
+
+.siteNavigation {
+    max-width: 650px;
 }
 
 .userNavigation {
@@ -288,6 +290,7 @@ p.userForm {
     box-sizing: border-box;
     width: 100px;
     display: inline-block;
+    vertical-align: top;
 }
 
 .informationSection {
@@ -361,6 +364,14 @@ p.userForm {
 
 .siteWrapper::after {
   background-image: url("../img/slider_ice3.png");
+}
+
+.shopInfoIndex {
+    margin-top: -5px;
+}
+
+.shopInfoIndex .phoneNumber {
+    padding-top: 5px;
 }
 
 .slider {
@@ -462,13 +473,13 @@ p.userForm {
 .gifts .giftRaspberry {
     background-color: #701c33;
     background-image: url('../img/raspberry_bg.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .gifts .giftChoco {
     background-color: #3e271c;
     background-image: url('../img/chocolate_bg.jpg');
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .giftContainer p {
@@ -476,7 +487,7 @@ p.userForm {
     font-size: 18px;
     font-weight: 700;
     margin-top: 16px;
-    margin-bottom: 90px;
+    margin-bottom: 45px;
 }
 
 .giftContainer h3 {
@@ -489,8 +500,8 @@ p.userForm {
 }
 
 .giftContainer .btn {
-    position: absolute;
-    top: 160px;
+    float: right;
+
 }
 
 .giftRaspberry .btn {
@@ -702,6 +713,7 @@ p.temperature {
     margin-right: 11px;
     height: 44px;
     min-width: 210px;
+    vertical-align: top;
 }
 
 .btn {
@@ -718,6 +730,7 @@ p.temperature {
     color: #fefefe;
     border: none;
     cursor: pointer;
+    vertical-align: top;
 }
 
 .btn:hover {
@@ -746,6 +759,7 @@ section.map {
     top: 63px;
     left: 871px;
     text-align: left;
+    z-index: 10;
 }
 
 .mapText .address {
@@ -786,12 +800,6 @@ section.map {
     display: flex;
 }
 
-.mainFooter .social {
-    width: 210px;
-    margin-right: 210px;
-    padding-top: 30px;
-}
-
 .social .socialButton {
     width: 38px;
     height: 38px;
@@ -807,11 +815,13 @@ section.map {
     padding-top: 25px;
 }
 
-.social ul {
+.mainFooter ul.social {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: flex-start;  
+    justify-content: flex-start;
+    width: 210px;
+    margin-right: 210px;
+    padding-top: 30px;
 }
 
 .social .socialTwitter::before {
@@ -887,19 +897,20 @@ section.map {
 
 .footerLinks a {
     font-size: 13px;
+    color: #fff;
 }
 
-.footerLinks ul {
+ul.footerLinks {
     display: flex;
     flex-wrap: wrap;
 }
 
-.furtherLinks li {
+.footerLinks li {
     min-width: 143px;
     position: relative;
 } 
 
-.furtherLinks li:first-child::before {
+.footerLinks li:first-child::before {
     content: "";
     background-image: url('../img/heart.svg');
     background-repeat: no-repeat;
@@ -924,6 +935,7 @@ section.map {
 
 .logoLink {
     font-weight: normal;
+    color: #fff;
 }
 
 /* Форма отзыва */
@@ -1078,6 +1090,7 @@ section.map {
     margin-right: 26px;
     width: 220px;
     display: inline-block;
+    vertical-align: top;
 }
 
 .goodsFeatures {
@@ -1093,6 +1106,7 @@ section.map {
     margin-right: 0;
     margin: 0;
     padding-top: 8px;
+    vertical-align: top;
 }
 
 .firstGoods {
@@ -1127,6 +1141,7 @@ section.map {
 .goodsChosen .goodsPrice {
     color: #999;
     display: inline-block;
+    vertical-align: top;
 }
 
 .totalPrice {
@@ -1170,16 +1185,16 @@ span.workTime, span.phoneNumber {
 }
 
 .shopInfo {
-    position: absolute;
-    top: 75px;
-    right: -30px;
-    padding-right: 57px;
-    text-align: right;
+    margin-top: -4px;
+}
+
+.shopInfo .phoneNumber {
+    padding-top: 4px;
 }
 
 .breadcrumbs {
     list-style: none;
-    margin-top: 17px;
+    margin-top: -23px;
 }
 
 .breadcrumbs a:hover {
@@ -1204,12 +1219,14 @@ span.workTime, span.phoneNumber {
 .breadcrumbs li {
     display: inline-block;
     margin-right: 17px;
+    vertical-align: initial;
 }
 
 .breadcrumbs a {
     font-size: 14px;
     line-height: 16px;
     font-weight: normal;
+    color: #fff;
 }
 
 .breadcrumbsCurrent {
@@ -1242,20 +1259,23 @@ ul.icecreamList {
 }
 
 .icecreamListContent {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
+    
 }
 
 .icecreamItem {
     width: 267px;
     margin-right: 26px;
     position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 .icecreamItem h2 {
-    margin-top: 8px;
+    margin: 0 auto;
+    margin-bottom: 11px;
+    text-align: center;
 }
 
 .icecreamItem .thirdRow {
@@ -1278,9 +1298,7 @@ ul.icecreamList {
     font-weight: 500;
     text-align: center;
     font-size: 16px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 11px;
+    color: #fff;
 }
 
 .icecreamItem .shorterLink {
@@ -1290,7 +1308,7 @@ ul.icecreamList {
 .showBtn {
     display: none;
     position: absolute;
-    bottom: -30px;
+    bottom: -46px;
     left: 30px;  
     padding: 12px 17px;
     padding-bottom: 13px;
@@ -1318,7 +1336,6 @@ ul.icecreamList {
     position: absolute;
     z-index: 5;
     content: "";  
-    display: block;
     top: 0;
     left: -15px;
     width: 293px;
@@ -1357,6 +1374,13 @@ ul.icecreamList {
     order: 4;
 }
 
+.filterWrapper {
+    padding: 6px 8px 7px 15px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 23px;
+    box-sizing: content-box;
+}
+
 .fatting {
     order: 3;
 }
@@ -1376,12 +1400,16 @@ ul.icecreamList {
 .filterSection .filterSelect {
     font-size: 16px;
     line-height: 18px;
+    padding-right: 20px;
+    border: 0;
     color: #fff;
-    background: rgba(255, 255, 255, 0.2);
+    background-color: transparent;
+    padding-right: 20px;
 }
 
 .inputBg {
-    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .filterBtn {
@@ -1403,7 +1431,31 @@ ul.icecreamList {
 .filterBtn:active {
     background-color: #ededed;
     box-shadow: inset 0px 2px 1px 0 #696969;
+    
 }
+
+
+.filters {
+    margin-bottom: 40px;
+}
+
+.filters fieldset {
+    border: 0;
+    margin: 0;
+    margin-right: 12px;
+    padding: 0;
+    font-weight: 500;
+}
+
+.filters legend {
+    margin-left: 21px;
+    margin-bottom: 7px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #ffffff;
+}
+
 
 /* Пагинация */
 
